@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/myScreen"
+>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red Hue"
+            android:id="@+id/textView4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/mySeekingBar_R"
+            app:layout_constraintBottom_toTopOf="@+id/mySeekingBar_R"/>
+    <SeekBar
+            android:id="@+id/mySeekingBar_R"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progress="0"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Green Hue"
+              android:id="@+id/textView5"
+              app:layout_constraintStart_toStartOf="@+id/mySeekingBar_R"
+              app:layout_constraintTop_toBottomOf="@+id/mySeekingBar_R"
+              app:layout_constraintBottom_toTopOf="@+id/mySeekingBar_G"/>
+    <SeekBar
+            android:id="@+id/mySeekingBar_G"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progress="0"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Blue Hue"
+              android:id="@+id/textView6"
+              app:layout_constraintStart_toStartOf="@+id/mySeekingBar_G"
+              app:layout_constraintTop_toBottomOf="@+id/mySeekingBar_G"
+              app:layout_constraintBottom_toTopOf="@+id/mySeekingBar_B"/>
+    <SeekBar
+            android:id="@+id/mySeekingBar_B"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progress="0"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="240dp"
+            android:id="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/mySeekingBar_B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
